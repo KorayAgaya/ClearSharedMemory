@@ -11,7 +11,7 @@ do
     for item in $list
     do
         kill -9 $item
-	      all=( $(ipcs -mp | grep $item | grep -v grep |awk {'printf ("%5s\t%s\n", $1, $3)'}|grep $item |awk -F ' ' '{print $1}') )
+	all=( $(ipcs -mp | grep $item | grep -v grep |awk {'printf ("%5s\t%s\n", $1, $3)'}|grep $item |awk -F ' ' '{print $1}') )
     done
 done
 
@@ -23,7 +23,7 @@ for list in "${DSS_LocalCtrl_PidList[@]}"
 do
     for item in $list
     do
-	      kill -9 $item
+	kill -9 $item
         all+=( $(ipcs -mp | grep $item | grep -v grep | awk {'printf ("%5s\t%s\n", $1, $3)'}|grep $item |awk -F ' ' '{print $1}') )
     done
 done
@@ -36,7 +36,7 @@ do
     for item in $list
     do
         kill -9 $item
-	      all+=( $(ipcs -mp | grep $item | grep -v grep | awk {'printf ("%5s\t%s\n", $1, $3)'}| grep $item | awk -F ' ' '{print $1}') )
+	all+=( $(ipcs -mp | grep $item | grep -v grep | awk {'printf ("%5s\t%s\n", $1, $3)'}| grep $item | awk -F ' ' '{print $1}') )
     done
 done
 
