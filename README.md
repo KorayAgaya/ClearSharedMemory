@@ -1,2 +1,2 @@
 # ClearSharedMemory
-How clear memory share for process  custom processes id
+How to clear memory share for custom processes id
